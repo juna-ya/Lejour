@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차메뉴 + 이미지</title>
+    <link rel="stylesheet" href="lib/dist/fullpage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/르주르.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function() {
+
+            $('.nav .gnb > li').mouseenter(function(){
+                if($(this).find('.depth02_wrap').css('display') === 'none') {
+                    $('.depth02_wrap').stop().slideDown();
+                } else {
+                    $('.depth02_wrap').stop().slideUp();
+                }
+            });
+            $('.depth02_wrap').mouseenter(function(){
+                $(this).slideUp()
+            })
+            $('.search img').click(function(){
+                $('.search_box').slideToggle()
+            });
+
+            var swiper = new Swiper(".mainVisual", {
+
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                speed: 1000,
+                ioop: true,
+            });
+        }); // script end
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="img/르주르 로고.png" alt="르주르 로고"></a>
+                </h1><!-- .logo -->
+
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth01">1차메뉴</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="depth01">1차메뉴</a>
+                            <div class="depth02_wrap">
+                                <div class="inner">
+                                    <ul class="depth02">
+                                        <li>
+                                            <a href="#">2차메뉴</a>
+                                            <ul class="depth03">
+                                                <li><a href="#">3차메뉴-1</a></li>
+                                                <li><a href="#">3차메뉴-2</a></li>
+                                            </ul><!-- .depth03 -->
+                                        </li>
+
+                                        <li>
+                                            <a href="#">2차메뉴</a>
+                                            <ul class="depth03">
+                                                <li><a href="#">3차메뉴-1</a></li>
+                                                <li><a href="#">3차메뉴-2</a></li>
+                                                <li><a href="#">3차메뉴-3</a></li>
+                                                <li><a href="#">3차메뉴-4</a></li>
+                                                <li><a href="#">3차메뉴-5</a></li>
+                                            </ul><!-- .depth03 -->
+                                        </li>
+
+                                    </ul><!-- .depth02 -->
+                                    <div class="depth02_image">
+                                        <img src="img/르주르 1.jpg" alt="">
+                                    </div><!-- .depth_image -->
+
+                                </div><!-- .inner -->
+                            </div><!-- .depth02_wrap -->
+                        </li>
+
+                        <li><a href="#" class="depth01">1차메뉴</a></li>
+                        <li><a href="#" class="depth01">1차메뉴</a></li>
+                        <li><a href="#" class="depth01">1차메뉴</a></li>
+                    </ul><!-- .gnb -->
+                </nav><!-- .nav -->
+
+                <div class="util">
+                    <div class="lang">
+                        <span>LANGUAGES</span>
+                        <ul>
+                            <li><a href="#">Korean</a></li>
+                            <li><a href="#">english</a></li>
+                        </ul>
+                    </div> <!-- .lang(언어) -->
+
+                    <ul class="top_menu">
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">JOIN</a></li>
+                        <li><a href="#">CART <img src="img/icon-cart.png" alt="장바구니"></a></li>
+                        <li class="search">
+                            <a href="#"><img src="img/icon-search (1).png" alt="검색하기"></a>
+                            <div class="search_box">
+                                <div class="search_box_in">
+                                    <input type="text" placeholder="SEARCH">
+                                    <img src="img/icon-searchbox.png" alt="검색">
+                                </div><!-- .srarch_box_in -->
+                            </div><!-- .search_box -->
+                        </li><!-- .search -->
+                    </ul><!-- .top_menu -->
+                </div><!-- .util -->
+
+            </div><!-- .inner -->
+        </header><!-- .header -->
+
+        <main>
+            <section class="mian_visual">
+                <!-- 스와이퍼 슬라이드 구현, 자동슬라이드 -->
+
+                <div class="swiper mainVisual">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="img/르주르 2.jpg" alt=""></div>
+                      <div class="swiper-slide"><img src="img/르주르 3.jpg" alt=""></div>
+                     
+                    </div>
+                  </div>
+            </section><!-- .mian_visual -->
+        </main>
+    </div><!-- ＃wrap -->
+
+    <div class="main_link">
+        <div class="link_wrap">
+            <div class="link">
+                <a href="#">
+                    <p class="en-p">join us</p>
+                    <p class="ko-p">회원가입 시 적립금 2,000원을 드려요.</p>
+                </a>
+            </div><!-- .link -->
+            <div class="link">
+                <a href="#">
+                    <p class="en-p">review</p>
+                    <p class="ko-p">리뷰를 남겨주시면 적립금을 드려요.</p>
+                </a>
+            </div><!-- .link -->
+            <div class="link">
+                <a href="#">
+                    <p class="en-p">contents</p>
+                    <p class="ko-p">다양한 콘텐츠를 통해서 Le Jour의 따뜻함을 느껴보세요.</p>
+                </a>
+            </div><!-- .link -->
+        </div><!-- .link_wrap end -->
+    </div><!-- .main_link end -->
+
+    <div class="main_choice">
+        <div class="title">Le Jour's selection</div>
+
+        <div class="editor-tabtit">
+            <ul class="tabtit">
+                <li class="active"><div>세트</div></li>
+                <li><div>세제</div></li>
+                <li><div>섬유유연제</div></li>
+                <li><div>주방 / 탈취 용품</div></li>
+                <li><div>욕실용품</div></li>
+                <li><div>세탁보조제</div></li>
+                <li><div>로션 / 크림</div></li>
+                <li><div>기프트 액세서리</div></li>
+            </ul>
+        </div>
+
+        <div class="item_wrap">
+            <div class="item">
+                <a href="#">
+                    <div class="image">
+                        <img src="img/르주르_1.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Le Jour family set</p>
+                        <h3>르주르 패밀리 세트</h3>
+                        <span>102,000원 </span> →
+                        <strong> 91,800원 </strong>
+                    </div>
+                </a>
+            </div><!-- .item -->
+
+            <div class="item">
+                <a href="#">
+                    <div class="image">
+                        <img src="img/르주르_2.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Le Jour baby set</p>
+                        <h3>르주르 베이비 세트</h3>
+                        <span>53,000원 </span> →
+                        <strong> 49,000원 </strong>
+                    </div>
+                </a>
+            </div><!-- .item -->
+
+            <div class="item">
+                <a href="#">
+                    <div class="image">
+                        <img src="img/르주르_3.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Le Jour single set</p>
+                        <h3>르주르 싱글족 세트</h3>
+                        <span>49,000원 </span> →
+                        <strong> 45,000원 </strong>
+                    </div>
+                </a>
+            </div><!-- .item -->
+
+            <div class="item">
+                <a href="#">
+                    <div class="image">
+                        <img src="img/르주르_4.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Le Jour kitchen set</p>
+                        <h3>르주르 키친 세트</h3>
+                        <span>32,000원 </span> →
+                        <strong> 30,000원 </strong>
+
+                    </div>
+                </a>
+            </div><!-- .item -->
+        </div><!-- .item_wrap end -->
+
+        <div class="more_btn">
+            <div class="more_btn_text">
+                <strong>MORE VIEW</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="event">
+        <div class="title">Event</div>
+
+    </div>
+</body>
+
+</html>
