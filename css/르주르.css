@@ -193,7 +193,8 @@ header .inner .util .top_menu li.search .search_box {
     left: 0;
     background-color: #fff;
     padding: 30px 0;
-    /* display: none; */
+
+    display: none;
 }
 header .top_menu li.search .search_box .search_box_in {
     width: 710px;

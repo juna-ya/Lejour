@@ -6,39 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3차메뉴 + 이미지</title>
     <link rel="stylesheet" href="lib/dist/fullpage.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/르주르.css">
 
-    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src=""></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
     <script>
-        $(function() {
+       $(function () {
+             
 
-            $('.nav .gnb > li').mouseenter(function(){
-                if($(this).find('.depth02_wrap').css('display') === 'none') {
-                    $('.depth02_wrap').stop().slideDown();
-                } else {
-                    $('.depth02_wrap').stop().slideUp();
-                }
-            });
-            $('.depth02_wrap').mouseenter(function(){
-                $(this).slideUp()
-            })
-            $('.search img').click(function(){
-                $('.search_box').slideToggle()
-            });
 
-            var swiper = new Swiper(".mainVisual", {
 
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                speed: 1000,
-                ioop: true,
-            });
-        }); // script end
+             $('.nav .gnb > li').mouseenter(function(){
+                 if($(this).find('.depth02_wrap').css('display') === 'none') {
+                     $('.depth02_wrap').stop().slideDown();
+                 } else {
+                     $('.depth02_wrap').stop().slideUp();
+                 }
+                 
+             });
+             $('.depth02_wrap').mouseleave(function(){
+                 $(this).slideUp()
+             })
+              
+ 
+             //제품 슬라이드
+             var swiper = new Swiper(".mainVisual", {
+              
+                 autoplay: {
+                     delay: 2500,
+                     disableOnInteraction: false,
+                 },
+                 speed: 1000,
+                 loop: true,
+             });
+         });
     </script>
 
 </head>
@@ -130,11 +137,11 @@
 
                 <div class="swiper mainVisual">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide"><img src="img/르주르 2.jpg" alt=""></div>
-                      <div class="swiper-slide"><img src="img/르주르 3.jpg" alt=""></div>
-                     
+                        <div class="swiper-slide"><img src="img/르주르 2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/르주르 3.jpg" alt=""></div>
+
                     </div>
-                  </div>
+                </div>
             </section><!-- .mian_visual -->
         </main>
     </div><!-- ＃wrap -->
@@ -167,14 +174,30 @@
 
         <div class="editor-tabtit">
             <ul class="tabtit">
-                <li class="active"><div>세트</div></li>
-                <li><div>세제</div></li>
-                <li><div>섬유유연제</div></li>
-                <li><div>주방 / 탈취 용품</div></li>
-                <li><div>욕실용품</div></li>
-                <li><div>세탁보조제</div></li>
-                <li><div>로션 / 크림</div></li>
-                <li><div>기프트 액세서리</div></li>
+                <li class="active">
+                    <div>세트</div>
+                </li>
+                <li>
+                    <div>세제</div>
+                </li>
+                <li>
+                    <div>섬유유연제</div>
+                </li>
+                <li>
+                    <div>주방 / 탈취 용품</div>
+                </li>
+                <li>
+                    <div>욕실용품</div>
+                </li>
+                <li>
+                    <div>세탁보조제</div>
+                </li>
+                <li>
+                    <div>로션 / 크림</div>
+                </li>
+                <li>
+                    <div>기프트 액세서리</div>
+                </li>
             </ul>
         </div>
 
